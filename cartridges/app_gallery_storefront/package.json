@@ -1,0 +1,5 @@
+{
+    "paths": {
+        "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"
+    }
+}

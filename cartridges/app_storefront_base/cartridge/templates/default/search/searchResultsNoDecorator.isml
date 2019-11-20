@@ -93,4 +93,5 @@
 
         </div>
     </div>
+${pdict.apiProductSearch.category.custom.seoText}
 </div>
