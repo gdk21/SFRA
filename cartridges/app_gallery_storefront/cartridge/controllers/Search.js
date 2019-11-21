@@ -80,7 +80,7 @@ server.get('ShowAjax', cache.applyShortPromotionSensitiveCache, consentTracking.
             maxSlots: result.maxSlots,
             reportingURLs: result.reportingURLs,
             refineurl: result.refineurl,
-            category: result.category ? result.category : null,
+            category: result.productSearch.category ? result.productSearch.category : null,
             canonicalUrl: result.canonicalUrl,
             schemaData: result.schemaData
     });

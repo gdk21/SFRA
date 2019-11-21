@@ -26,6 +26,8 @@ function handleRefinements($results) {
         activeDiv.find('button.title').attr('aria-expanded', 'true');
     });
 
+    console.log('result : ', $results);
+
     updateDom($results, '.refinements');
 }
 
@@ -48,10 +50,13 @@ function parseResults(response) {
         '.header.page-title',
         '.product-grid',
         '.show-more',
-        '.filter-bar'
+        '.filter-bar',
+        '.seo'
     ].forEach(function (selector) {
         updateDom($results, selector);
     });
+
+    console.log('result : ', $results);
 
     Object.keys(specialHandlers).forEach(function (selector) {
         specialHandlers[selector]($results);

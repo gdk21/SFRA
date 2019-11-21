@@ -20,7 +20,7 @@ $pull: left, right;
     @include media($size) {
 
         @each $side in $pull {
-            .pull-#{$side}-#{$size} {
+            .pull-#{$side} {
                 float: $side;
             }
         }

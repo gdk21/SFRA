@@ -4,8 +4,8 @@
 @import "bootstrap-custom-import";
 @import "bootstrapOverrides";
 @import "utilities/responsiveUtils";
-@import "font-awesome/scss/font-awesome";
-@import "flag-icon";
+@import "../../../../../../node_modules/font-awesome/scss/font-awesome.scss";
+// @import "flag-icon";
 @import "components/common";
 @import "components/header";
 @import "components/footer";

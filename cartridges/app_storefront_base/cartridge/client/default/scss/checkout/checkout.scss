@@ -1,7 +1,7 @@
 @import "../variables";
-@import "bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
 @import "checkoutComponents";
-@import "bootstrap/scss/mixins/breakpoints";
+@import "../../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../components/formFields";
 @import "../components/creditCardField";
 

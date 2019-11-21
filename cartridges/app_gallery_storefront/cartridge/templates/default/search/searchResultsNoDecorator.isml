@@ -2,10 +2,10 @@
     <isinclude template="reporting/reportingUrls" />
 </isif>
 
-<!--- Search Results Banner --->
+<iscomment> Search Results Banner </iscomment>
 <isif condition="${pdict.productSearch.isCategorySearch}">
     <div class="hero slant-down search-banner"
-        <!--- If no image, default is specified in search.scss > .search-banner --->
+        
         <isif condition="${pdict.productSearch.bannerImageUrl}">
             style="background-image: url(${pdict.productSearch.bannerImageUrl})"
         </isif>
@@ -102,15 +102,13 @@
 
         </isif>
     </iscomment>
-    <div class="header page-title">
-        
-    </div>
+
     <div class="seo">
         <div>Category : ${pdict.productSearch.category}</div>
         <div>Category's SEO : ${pdict.productSearch.category.custom.seoText}</div>
-        <div>API Category : ${pdict.apiProductSearch.category}</div>
-        <div>API Category's SEO : ${pdict.apiProductSearch.category.custom.seoText}</div>
-        <div class="seo">Product Name: ${pdict.productSearch.category.name} </div>
+        <iscomment> <div>API Category : ${pdict.apiProductSearch.category}</div> </iscomment>
+        <div>API Category's SEO : ${pdict.productSearch.productSearch.category.custom.seoText}</div>
+        <div>Product Name: ${pdict.productSearch.category.name} </div>
     </div>
 
              <iscomment> <isloop items="${pdict.apiProductSearch.category.subCategories}" alias="subCategory" status="loopstatus">

@@ -1,6 +1,6 @@
 @import "../variables";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins/breakpoints";
+@import "../../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../utilities/shapes";
 @import "../utilities/responsiveUtils";
 @import "../utilities/swatch";
@@ -192,4 +192,21 @@ label.availability {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
+}
+
+.modal-background {
+    display: none !important;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+
+.gallery > div > img{
+max-width : 100%;
+height: auto;
+display: block;
 }
