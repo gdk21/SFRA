@@ -85,42 +85,23 @@
                         </div>
                     </div>
                     
-                </isif>
+                </isif> 
+                <!--- Custom seoText --->                 
+                <isif condition="${pdict.productSearch.productSearch.category.custom.seoText}">
+                <div class="seo">
+                    <div>Category : ${pdict.productSearch.category}</div>
+                    <div>Category's SEO : ${pdict.productSearch.category.custom.seoText}</div>
+                    <div>API Category : ${pdict.apiProductSearch.category}</div> 
+                    <div>API Category's SEO : ${pdict.productSearch.productSearch.category.custom.seoText}</div>
+                    <div>Product Name: ${pdict.productSearch.category.name} </div> 
+                </div>
+                <iselse/>
+                </isif>                   
             </div>
             <!--- Content Grid --->
             <div class="tab-pane container" id="content-search-results-pane" role="tabpanel" aria-labelledby="articles-tab">
                 <div id="content-search-results" class="content-grid-header"></div>
             </div>
-
         </div>
     </div>
-    <iscomment>
-        <isif condition="${pdict.apiProductSearch.category.displayName === pdict.productSearch.category.name}">
-            ${pdict.apiProductSearch.category.custom.seoText}
-            ${pdict.productSearch.category.name}
-        <iselse/>
-
-        </isif>
-    </iscomment>
-
-    <div class="seo">
-        <div>Category : ${pdict.productSearch.category}</div>
-        <div>Category's SEO : ${pdict.productSearch.category.custom.seoText}</div>
-        <iscomment> <div>API Category : ${pdict.apiProductSearch.category}</div> </iscomment>
-        <div>API Category's SEO : ${pdict.productSearch.productSearch.category.custom.seoText}</div>
-        <div>Product Name: ${pdict.productSearch.category.name} </div>
-    </div>
-
-             <iscomment> <isloop items="${pdict.apiProductSearch.category.subCategories}" alias="subCategory" status="loopstatus">
-                <div>
-                ${subCategory.displayName}
-                ${pdict.productSearch.category.name}
-                ${}
-                </div>
-                <isif condition="${subCategory.displayName === pdict.productSearch.category.name}">
-                ${subCategory.custom.seoText}
-                <iselse/>
-                ${pdict.productSearch.category.name}
-                </isif>
-            </isloop> </iscomment>
 </div>

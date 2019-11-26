@@ -29,7 +29,6 @@ function categoryToObject(category) {
         name: category.getDisplayName(),
         url: getCategoryUrl(category),
         id: category.ID
-       // seoText: getCategorySeo(category)
     };
     var subCategories = category.hasOnlineSubCategories() ?
         category.getOnlineSubCategories() : null;

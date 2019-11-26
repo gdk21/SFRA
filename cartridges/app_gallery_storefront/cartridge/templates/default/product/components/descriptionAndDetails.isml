@@ -32,7 +32,11 @@
 
         <isinclude template="product/components/details" />
     </div>
-    <div class="row collapsible-xs <isif condition="${pdict.gallery.attributes.length < 0}">hidden-xl-down</isif>">
+    <isif condition="${pdict.gallery.attributes}">
+    <div class="row collapsible-xs">
         <isinclude template="product/components/gallery" />
     </div>
+    <iselse/>
+    </isif>
+
 </div>
