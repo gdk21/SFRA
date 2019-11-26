@@ -51,7 +51,7 @@ function parseResults(response) {
         '.product-grid',
         '.show-more',
         '.filter-bar',
-        '.seo',
+        '.seoText',
         '.hidden-xl-down'
     ].forEach(function (selector) {
         updateDom($results, selector);

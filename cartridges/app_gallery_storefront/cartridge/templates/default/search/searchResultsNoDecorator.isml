@@ -86,17 +86,12 @@
                     </div>
                     
                 </isif> 
-                <!--- Custom seoText --->                 
-                <isif condition="${pdict.productSearch.productSearch.category.custom.seoText}">
-                <div class="seo">
-                    <div>Category : ${pdict.productSearch.category}</div>
-                    <div>Category's SEO : ${pdict.productSearch.category.custom.seoText}</div>
-                    <div>API Category : ${pdict.apiProductSearch.category}</div> 
-                    <div>API Category's SEO : ${pdict.productSearch.productSearch.category.custom.seoText}</div>
-                    <div>Product Name: ${pdict.productSearch.category.name} </div> 
-                </div>
-                <iselse/>
-                </isif>                   
+                <!--- Custom seoText --->     
+                <div class="row seoText">
+                    <isif condition="${pdict.productSearch.productSearch.category.custom.htmlBlock}">
+                        <isprint value="${pdict.productSearch.productSearch.category.custom.htmlBlock}" encoding="off" />
+                    </isif>   
+                </div>                            
             </div>
             <!--- Content Grid --->
             <div class="tab-pane container" id="content-search-results-pane" role="tabpanel" aria-labelledby="articles-tab">
