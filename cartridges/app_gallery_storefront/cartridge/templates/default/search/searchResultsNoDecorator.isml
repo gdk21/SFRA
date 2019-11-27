@@ -4,12 +4,14 @@
 
 <iscomment> Search Results Banner </iscomment>
 <isif condition="${pdict.productSearch.isCategorySearch}">
-    <div class="hero slant-down search-banner"
+<div class="test">
+        <div class="hero slant-down search-banner"
         
         <isif condition="${pdict.productSearch.bannerImageUrl}">
             style="background-image: url(${pdict.productSearch.bannerImageUrl})"
         </isif>
         >
+
         <h1 class="header page-title">
             ${pdict.productSearch.category.name} 
         </h1>
@@ -18,6 +20,8 @@
 <iselse>
     <isslot id="search-result-banner-m" description="Banner for search results" context="global" />
 </isif>
+</div>
+
 <div class="container search-results">
     <div class="row search-nav">
         <isif condition="${!pdict.productSearch.isCategorySearch}">
