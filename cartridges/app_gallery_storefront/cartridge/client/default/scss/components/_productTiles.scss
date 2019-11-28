@@ -30,8 +30,10 @@
 
     .tile-body {
         padding: 0.625em 0 1.875em;
+        background-color: $grey1;
 
         .color-swatches {
+            display: none;
             min-height: 2.25em;
 
             .product-tile-color-label {
@@ -134,6 +136,16 @@
     .swatch-circle {
         // $white will be replaced by color image background via Javascript
         @include swatch(1.8em, $white);
+    }
+}
+.product-tile:hover{
+    .tile-body{
+        transform: translateY(-5em);
+        transition: .2s ease-in;
+        
+    }
+    .color-swatches{
+        display: block;
     }
 }
 

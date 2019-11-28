@@ -11660,8 +11660,10 @@ div.availability {
     .product-tile {
       min-height: 13.4375em; } }
   .product-tile .tile-body {
-    padding: 0.625em 0 1.875em; }
+    padding: 0.625em 0 1.875em;
+    background-color: #f9f9f9; }
     .product-tile .tile-body .color-swatches {
+      display: none;
       min-height: 2.25em; }
       .product-tile .tile-body .color-swatches .product-tile-color-label {
         cursor: pointer;
@@ -11756,6 +11758,13 @@ div.availability {
       height: 0.75em;
       line-height: 0.8em;
       width: 0.8em; }
+
+.product-tile:hover .tile-body {
+  transform: translateY(-5em);
+  transition: .2s ease-in; }
+
+.product-tile:hover .color-swatches {
+  display: block; }
 
 #chooseBonusProductModal .modal-footer .container {
   margin-left: 0;
