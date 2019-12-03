@@ -26,14 +26,16 @@
     }
 
     border: 0;
-    margin-bottom: 0;
+    margin-bottom: -2em;
 
     .tile-body {
+        transition: .5s ease-out;
         padding: 0.625em 0 1.875em;
         background-color: $grey1;
 
         .color-swatches {
-            display: none;
+            opacity: 0;
+            transition: opacity .5s ;
             min-height: 2.25em;
 
             .product-tile-color-label {
@@ -102,6 +104,7 @@
         overflow: auto;
 
         .quickview {
+            transition: .5s ease-out;
             position: absolute;
             bottom: 1rem;
             right: 1rem;
@@ -123,6 +126,8 @@
 
             .tile-image {
                 width: 100%;
+                transition: .5s ease-in;
+
             }
         }
     }
@@ -141,11 +146,21 @@
 .product-tile:hover{
     .tile-body{
         transform: translateY(-5em);
-        transition: .2s ease-in;
+        transition: .5s ease-in;
         
     }
     .color-swatches{
-        display: block;
+    opacity:1;
+    }
+
+    .quickview{
+        transform: translateY(-5em);
+        transition: .5s ease-in;
+    }
+
+    .tile-image{
+        filter: grayscale(80%);
+        transition: .5s ease-in;
     }
 }
 

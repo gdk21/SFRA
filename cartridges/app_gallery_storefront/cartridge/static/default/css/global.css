@@ -11649,7 +11649,7 @@ div.availability {
 
 .product-tile {
   border: 0;
-  margin-bottom: 0; }
+  margin-bottom: -2em; }
   @media (max-width: 991.98px) {
     .product-tile {
       min-height: 23.4375em; } }
@@ -11660,10 +11660,12 @@ div.availability {
     .product-tile {
       min-height: 13.4375em; } }
   .product-tile .tile-body {
+    transition: .5s ease-out;
     padding: 0.625em 0 1.875em;
     background-color: #f9f9f9; }
     .product-tile .tile-body .color-swatches {
-      display: none;
+      opacity: 0;
+      transition: opacity .5s;
       min-height: 2.25em; }
       .product-tile .tile-body .color-swatches .product-tile-color-label {
         cursor: pointer;
@@ -11706,6 +11708,7 @@ div.availability {
     position: relative;
     overflow: auto; }
     .product-tile .image-container .quickview {
+      transition: .5s ease-out;
       position: absolute;
       bottom: 1rem;
       right: 1rem; }
@@ -11717,7 +11720,8 @@ div.availability {
     .product-tile .image-container a {
       display: block; }
       .product-tile .image-container a .tile-image {
-        width: 100%; }
+        width: 100%;
+        transition: .5s ease-in; }
   .product-tile .swatches a {
     text-decoration: none; }
   .product-tile .swatch-circle {
@@ -11761,10 +11765,18 @@ div.availability {
 
 .product-tile:hover .tile-body {
   transform: translateY(-5em);
-  transition: .2s ease-in; }
+  transition: .5s ease-in; }
 
 .product-tile:hover .color-swatches {
-  display: block; }
+  opacity: 1; }
+
+.product-tile:hover .quickview {
+  transform: translateY(-5em);
+  transition: .5s ease-in; }
+
+.product-tile:hover .tile-image {
+  filter: grayscale(80%);
+  transition: .5s ease-in; }
 
 #chooseBonusProductModal .modal-footer .container {
   margin-left: 0;
